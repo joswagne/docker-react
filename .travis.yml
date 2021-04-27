@@ -8,3 +8,19 @@ before_install:
 
 script:
   - docker run -e CI=true USERNAME/docker-react npm run test
+
+# Uncomment when using Elastic Beanstalk
+# deploy:
+#   provider: elasticbeanstalk
+#   # Look at AWS Region
+#   region: us-east-1
+#   # Name of App
+#   app: docker
+#   # After Name of App
+#   env: "Docker-env"
+#   # Look for AWS S3 Bucket for Beanstalk Instance
+#   bucket_name: "FIXME"
+#   # Use App Name for Bucket Path
+#   bucket_path: "docker"
+#   on:
+#     branch: master
